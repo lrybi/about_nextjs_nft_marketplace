@@ -14,7 +14,7 @@ const AppInfo = {
 const config = getDefaultConfig({
     appName: 'My RainbowKit App',
     autoConnect: true,
-    projectId: projectId,
+    projectId: "f0e843dddcf3d3826b2f0f920a8b2917" || projectId,
     chains: [mainnet, sepolia, polygon, hardhat],
     transports: {
         [mainnet.id]: http(), 
