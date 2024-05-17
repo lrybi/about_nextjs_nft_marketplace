@@ -14,7 +14,7 @@ import {
 
 function makeClient() {
   const httpLink = new HttpLink({
-      uri: process.env.NEXT_PUBLIC_SUBGRAPH_URL,
+      uri: "https://api.studio.thegraph.com/query/72531/nft-marketplace/version/latest" || process.env.NEXT_PUBLIC_SUBGRAPH_URL,
   });
 
   return new NextSSRApolloClient({
