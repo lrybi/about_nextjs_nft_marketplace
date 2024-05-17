@@ -4,7 +4,6 @@ import "@rainbow-me/rainbowkit/styles.css";
 import Providers from "./providers";
 import Navbar from '@/components/Navbar';
 
-
 import { ApolloWrapper } from "./apollo-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });

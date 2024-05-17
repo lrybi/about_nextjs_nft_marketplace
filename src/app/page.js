@@ -7,19 +7,13 @@ import { useChainId } from 'wagmi';
 import { networkMappingAddresses } from "../../constants/index";
 import GET_ACTIVE_ITEMS from "../../constants/subgraphQueries"
 import { useQuery } from "@apollo/client";
-
-
-
   
 export default function Home() {
   const { isConnected, isDisconnected /*, address, addresses */ } = useAccount()
-
   const chainId = useChainId();
   const marketplaceAddress = chainId  in networkMappingAddresses ? networkMappingAddresses[chainId].NftMarketplace[0] : null;
-  
   const { loading, error, data: listedNfts } = useQuery(GET_ACTIVE_ITEMS);
   console.log(listedNfts);
-
 
   return (
     <div className="w-full">
@@ -30,7 +24,6 @@ export default function Home() {
         </h1> 
         {(isConnected && (chainId == 11155111)) && (
           <div className="flex flex-wrap">
-
             {
               loading || !listedNfts ? (
                 <div>Loading...</div>
@@ -44,7 +37,6 @@ export default function Home() {
                         tokenId={tokenId}
                         marketplaceAddress={marketplaceAddress}
                         seller={seller}
-
                         key={`${nftAddress}${tokenId}`}
                       />
                     ) : (

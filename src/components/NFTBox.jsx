@@ -10,10 +10,8 @@ import { formatUnits } from 'viem';
 import UpdateListingModal from './UpdateListingModal';
 import { useChainId } from 'wagmi';
 
-
 const truncateStr = (fullStr, strLen) => {
     if (fullStr.length <= strLen) return fullStr;
-  
     const separator = '...';
     const separatorLength = separator.length;
     const charsToShow = strLen - separatorLength;
@@ -25,17 +23,14 @@ const truncateStr = (fullStr, strLen) => {
 };
 
 export default function NFTBox({ price, nftAddress, tokenId, marketplaceAddress, seller }) {
-
     const { isConnected, address} = useAccount();
     const chainId = useChainId();
-   
     const [imageURL, setImageURL] = useState("");
     const [tokenName, setTokenName] = useState('');
     const [tokenDescription, setTokenDescription] = useState('');
     const [showModal, setShowModal] = useState(false);
     const hideModal = () => setShowModal(false);
     const { Meta } = Card;
-
     
     async function updateUI() {
         const tokenURI = await readContract(config, {
@@ -64,12 +59,10 @@ export default function NFTBox({ price, nftAddress, tokenId, marketplaceAddress,
         if (isConnected) {
             updateUI();
         }
-      }, [isConnected]);
+    }, [isConnected]);
     
     const isOwnedByYou = (seller.toLowerCase() === address.toLowerCase());
-
     const formattedSellerAddress = isOwnedByYou ? "You" : truncateStr(seller, 12);
-
     
     return (
         <div>

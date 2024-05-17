@@ -1,6 +1,5 @@
 "use client";
 
-
 import {
   ApolloClient,
   ApolloLink,
@@ -12,7 +11,6 @@ import {
   SSRMultipartLink,
   NextSSRApolloClient
 } from "@apollo/experimental-nextjs-app-support/ssr";
-
 
 function makeClient() {
   const httpLink = new HttpLink({

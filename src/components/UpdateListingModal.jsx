@@ -10,7 +10,6 @@ import { useChainId } from 'wagmi';
 import { config } from "../../helper-wagmi-config";
 import { useAccount } from 'wagmi';
 
-
 export default function UpdateListingModal({
     nftAddress,
     tokenId,
@@ -122,7 +121,6 @@ export default function UpdateListingModal({
             content: 'Cancel Listing confirmed!',
         });
     }
-
 
     return (
         <>
@@ -261,7 +259,6 @@ export default function UpdateListingModal({
                                         )
                                     }
                                     }
-
                                 >
                                     Cancel Listing
                                 </Button>
@@ -272,5 +269,4 @@ export default function UpdateListingModal({
             </Modal>
         </>
     )
-
 }

@@ -1,23 +1,16 @@
 "use client"
 
 import React from "react";
-import { useState, useEffect } from "react";
-    
+import { useState, useEffect } from "react";   
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
-
-
 import { http, WagmiProvider } from "wagmi";
-
 import { mainnet, sepolia, polygon, hardhat } from 'wagmi/chains'
-  
-const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 
-const chains = [mainnet, sepolia, polygon, hardhat];
-        
+const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
+const chains = [mainnet, sepolia, polygon, hardhat];       
 const AppInfo = {
     appName: "My RainbowKit App",
   };
-
 const config = getDefaultConfig({
     appName: 'My RainbowKit App',
     autoConnect: true,
@@ -35,7 +28,6 @@ import {
     QueryClientProvider,
     QueryClient,
 } from "@tanstack/react-query";
-
 const queryClient = new QueryClient();
 
 const Providers = ({ children }) => {

@@ -11,9 +11,6 @@ import { useChainId } from 'wagmi';
 import { useState, useEffect } from 'react';
 import { config } from "../../../helper-wagmi-config";
 import { readContract } from '@wagmi/core';
-
-
-
   
 export default function Sell() {
   const { isConnected, isDisconnected, address } = useAccount()
@@ -24,21 +21,17 @@ export default function Sell() {
   const [proceeds, setProceeds] = useState('0');
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
-  
   const { isPending: isPendingWriteContract, writeContract } = useWriteContract();
-  
 
   const approveAndList = async (values) => {
-    
     console.log('Approving...');
-
     const nftAddress = values.nftAddress;
     console.log("NFT Address:", nftAddress);
     const tokenId = values["tokenId"];
     console.log("Token ID:", tokenId);
     const price = parseEther(String(values.price)).toString();
     // console.log(BigInt(price));
-    
+
     const WriteContractApproveListingVariables = {
       abi: abiERC721,
       address: nftAddress, 
@@ -137,7 +130,6 @@ export default function Sell() {
       content: 'List item confirmed!',
     });
   }
-  
 
   const WriteContractWithdrawProceedsVariables = {
     abi: abiNftMarketplace,
@@ -189,7 +181,6 @@ export default function Sell() {
       updateProceedsUI();
     }
   }, [ address, isConnected, chainId ]);
-  
  
   return (
     <>
@@ -203,8 +194,6 @@ export default function Sell() {
           </h1> 
           {(isConnected && (chainId == 11155111)) && (
             <div>
-              
-
               <h1 className=" text-4xl font-mono font-bold text-rose-500">Sell your NFT</h1>
               <Form
                 form={form}
@@ -280,7 +269,7 @@ export default function Sell() {
                   </Button>
                 </Form.Item>
               </Form> 
-              
+
               <div>
                 {(proceeds != 0) && <h1 className=" text-2xl font-mono font-bold text-green-500">Withdraw {proceeds} proceeds</h1>}
               </div>
