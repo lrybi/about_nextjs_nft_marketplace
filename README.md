@@ -7,7 +7,7 @@ Built with:
 
 Hosting on IPFS & Filecoin using Fleek: https://sweet-mode-4385.on.fleek.co/
 
-backend: https://github.com/lrybi/about_nft_marketplace
+backend: https://github.com/lrybi/about_typescript_nft_marketplace
 
 subgraph: https://github.com/lrybi/thegraph_nft_marketplace
 
