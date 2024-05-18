@@ -7,6 +7,11 @@ Built with:
 
 Hosting on IPFS & Filecoin using Fleek: https://sweet-mode-4385.on.fleek.co/
 
+backend: https://github.com/lrybi/about_nft_marketplace
+
+subgraph: https://github.com/lrybi/thegraph_nft_marketplace
+
+
 ----------------
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
