@@ -5,6 +5,8 @@ Built with:
     + Wagmi
     + The Graph
 
+Hosting on IPFS & Filecoin using Fleek: https://sweet-mode-4385.on.fleek.co/
+
 ----------------
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
