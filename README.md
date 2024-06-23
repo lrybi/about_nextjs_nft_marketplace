@@ -5,7 +5,7 @@ Built with:
     + Wagmi
     + The Graph
 
-Hosting on IPFS & Filecoin using Fleek: https://sweet-mode-4385.on.fleek.co/
+Hosting on IPFS & Filecoin using Fleek: ...
 
 
 backend: https://github.com/lrybi/about_typescript_nft_marketplace
